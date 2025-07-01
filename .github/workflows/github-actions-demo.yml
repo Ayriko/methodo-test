@@ -1,5 +1,9 @@
 name: Kotlin CI with Kotest
 
+permissions:
+  checks: write
+  contents: read
+
 on:
   push:
     branches: [ main ]
