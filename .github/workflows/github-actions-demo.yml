@@ -31,3 +31,5 @@ jobs:
         if: always()
         with:
           files: '**/build/test-results/test/*.xml'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
