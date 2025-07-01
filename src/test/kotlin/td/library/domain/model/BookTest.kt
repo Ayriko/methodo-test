@@ -11,9 +11,9 @@ class BookTest: FunSpec({
 
         // Act & Assert
         val exception1 = kotlin.runCatching { libraryUseCase.addBook("", "Author") }
-        exception1.exceptionOrNull() shouldBe IllegalArgumentException("Title and author cannot be blank")
+        exception1.exceptionOrNull() shouldBe IllegalArgumentException("Title cannot be blank")
 
         val exception2 = kotlin.runCatching { libraryUseCase.addBook("Title", "") }
-        exception2.exceptionOrNull() shouldBe IllegalArgumentException("Title and author cannot be blank")
+        exception2.exceptionOrNull() shouldBe IllegalArgumentException("Author cannot be blank")
     }
 })
